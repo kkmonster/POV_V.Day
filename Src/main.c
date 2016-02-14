@@ -36,9 +36,13 @@
 /* USER CODE BEGIN Includes */
 #include "math.h"
 #include <stdlib.h>
+#include "text.h"
+#include "heart.h"
+//plot size 48*48 pixel
 
-//plot size 43*43 pixel
 
+#define heart_delay 300
+#define text_delay 250
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -57,6 +61,8 @@ uint16_t angle = 0;
 uint16_t period_rpm = 0;
 uint16_t period_step = 0;
 
+uint8_t * picture;
+	
 static int16_t cosin_table[200][17] = {0};
 
 
@@ -160,7 +166,7 @@ static const  uint8_t pic [] =  {
  
 
 
-static const  uint8_t Untitled [] = {
+static const  uint8_t test [] = {
 0xFF, 0xFF, 0xFF, 0x80, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0x80, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0x00,
 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0x80, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0x80, 0x00, 0x00, 0xFF, 0xFF,
 0xFF, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0x80, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0x80, 0x00, 0x00,
@@ -264,6 +270,8 @@ int main(void)
 		HAL_Delay(100);
 		led_a_write(0);
 		led_b_write(0);
+		
+		picture = (uint8_t * )pic;
   while (1)
   {
   /* USER CODE END WHILE */
@@ -283,6 +291,302 @@ int main(void)
 
 //		if(angle>=200)angle=0;
 		//HAL_Delay(100);
+		
+		for (int count1 = 0; count1< 4; count1++)
+		{
+			picture = (uint8_t * )heart_01;
+			HAL_Delay(heart_delay);
+			picture = (uint8_t * )heart_02;
+			HAL_Delay(heart_delay);
+			picture = (uint8_t * )heart_03;
+			HAL_Delay(heart_delay);
+		}
+		picture = (uint8_t * )text_001;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_002;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_003;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_004;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_005;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_006;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_007;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_008;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_009;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_010;
+		
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_011;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_012;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_013;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_014;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_015;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_016;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_017;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_018;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_019;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_020;
+		
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_021;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_022;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_023;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_024;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_025;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_026;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_027;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_028;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_029;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_030;
+		
+		HAL_Delay(text_delay);
+		picture = (uint8_t * )text_031;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_032;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_033;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_034;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_035;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_036;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_037;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_038;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_039;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_040;
+		
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_041;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_042;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_043;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_044;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_045;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_046;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_047;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_048;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_049;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_050;
+		
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_051;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_052;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_053;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_054;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_055;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_056;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_057;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_058;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_059;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_060;
+		
+		HAL_Delay(text_delay);
+		picture = (uint8_t * )text_061;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_062;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_063;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_064;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_065;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_066;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_067;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_068;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_069;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_070;
+		
+		HAL_Delay(text_delay);
+		picture = (uint8_t * )text_071;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_072;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_073;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_074;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_075;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_076;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_077;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_078;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_079;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_080;
+		
+		HAL_Delay(text_delay);
+		picture = (uint8_t * )text_081;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_082;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_083;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_084;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_085;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_086;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_087;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_088;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_089;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_090;
+		
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_091;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_092;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_093;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_094;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_095;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_096;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_097;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_098;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_099;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_100;
+		
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_101;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_102;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_103;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_104;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_105;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_106;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_107;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_108;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_109;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_110;
+		
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_111;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_112;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_113;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_114;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_115;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_116;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_117;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_118;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_119;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_120;
+		
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_121;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_122;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_123;
+		HAL_Delay(text_delay);	
+		picture = (uint8_t * )text_124;
+		HAL_Delay(text_delay);	
+
+		
+		for (int count1 = 0; count1< 4; count1++)
+		{
+			picture = (uint8_t * )heart_01;
+			HAL_Delay(heart_delay);
+			picture = (uint8_t * )heart_02;
+			HAL_Delay(heart_delay);
+			picture = (uint8_t * )heart_03;
+			HAL_Delay(heart_delay);
+		}
+		
+		for (int count1 = 0; count1< 4; count1++)
+		{
+			picture = (uint8_t * )pic;
+			HAL_Delay(heart_delay);
+			picture = (uint8_t * )text_124;
+			HAL_Delay(heart_delay);
+			picture = (uint8_t * )pic;
+			HAL_Delay(heart_delay);
+			picture = (uint8_t * )text_124;
+			HAL_Delay(heart_delay);
+		}
+		
+		
+		
   }
   /* USER CODE END 3 */
 
@@ -495,13 +799,13 @@ void angle_plot(void){
 	{
 		int16_t pointer = cosin_table[angle][led];
 		uint8_t mask = 0x80;
-		uint8_t OnOff = pic[pointer/8]&(mask >>((pointer%8)));
+		uint8_t OnOff = picture[pointer/8]&(mask >>((pointer%8)));
 		HAL_GPIO_WritePin(Led_a_port[16-led], Led_a[16-led], OnOff);
 
 		int16_t angle2 = angle+100;
 		if(angle2 >= 200) angle2 -=200;
 		pointer = cosin_table[angle2][led];
-		OnOff = pic[pointer/8]&(mask >>((pointer%8)));
+		OnOff = picture[pointer/8]&(mask >>((pointer%8)));
 		HAL_GPIO_WritePin(Led_b_port[16-led], Led_b[16-led], OnOff);
 	}
 	if(angle<200)angle++; 
